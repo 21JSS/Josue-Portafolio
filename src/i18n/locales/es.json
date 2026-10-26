@@ -1,0 +1,157 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "projects": "Proyectos",
+    "about": "Sobre mí",
+    "skills": "Habilidades",
+    "experience": "Experiencia",
+    "contact": "Contacto",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú"
+  },
+  "hero": {
+    "available": "Disponible para proyectos",
+    "role": "Full Stack Developer",
+    "greeting": "Hola, soy",
+    "name": "Josué",
+    "tagline": "Construyo soluciones digitales que marcan la diferencia",
+    "description": "Ingeniero en Sistemas Computacionales apasionado por el desarrollo web moderno. Creo aplicaciones escalables, interfaces intuitivas y experiencias digitales de alto impacto.",
+    "cta_projects": "Ver proyectos",
+    "cta_about": "Sobre mí",
+    "scroll": "Desplázate para explorar",
+    "photoAlt": "Espacio para fotografía de perfil"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "subtitle": "Trabajo seleccionado",
+    "demo": "Ver demo",
+    "code": "Ver código",
+    "noDemo": "Demo próximamente",
+    "noRepo": "Repositorio privado",
+    "items": {
+      "inventory": {
+        "title": "Sistema de Inventario de Equipos",
+        "description": "Sistema web desarrollado durante residencia profesional en MyCard para gestionar y controlar el inventario de equipos tecnológicos de la empresa.",
+        "problem": "La empresa necesitaba digitalizar y centralizar el control de sus activos tecnológicos para mejorar la trazabilidad y reducir pérdidas.",
+        "features": "Registro de equipos, asignación por área, reportes, historial de movimientos, panel de administración"
+      },
+      "imageRecognition": {
+        "title": "Reconocimiento de Imágenes con ML",
+        "description": "Aplicación de aprendizaje automático para clasificación y reconocimiento de imágenes mediante redes neuronales convolucionales.",
+        "problem": "Explorar el potencial de la IA aplicada a la visión por computadora para resolver problemas de clasificación visual.",
+        "features": "Clasificación en tiempo real, entrenamiento personalizado, interfaz de carga de imágenes, métricas de precisión"
+      },
+      "dotnetApi": {
+        "title": "API REST con ASP.NET Core",
+        "description": "API RESTful desarrollada con ASP.NET Core y Entity Framework, siguiendo principios de arquitectura limpia y buenas prácticas de seguridad.",
+        "problem": "Crear una capa de backend robusta, escalable y documentada para consumir desde aplicaciones frontend o móviles.",
+        "features": "Autenticación JWT, CRUD completo, documentación Swagger, validaciones, manejo de errores"
+      },
+      "configurable": {
+        "title": "Proyecto por definir",
+        "description": "Este espacio está reservado para un proyecto adicional. Personaliza el contenido en src/data/projects.ts.",
+        "problem": "Espacio configurable para tu próximo proyecto destacado.",
+        "features": "Características por definir"
+      }
+    }
+  },
+  "about": {
+    "title": "Sobre mí",
+    "subtitle": "Perfil profesional",
+    "description": "Soy un Ingeniero en Sistemas Computacionales con enfoque en el desarrollo de software Full Stack. Me apasiona construir productos digitales que combinen una ingeniería sólida con una experiencia de usuario excepcional.",
+    "focus": "Mi enfoque profesional",
+    "focusText": "Me especializo en el desarrollo de aplicaciones web modernas usando React en el frontend y ASP.NET Core o Node.js en el backend. Disfruto resolver problemas complejos y transformar ideas en soluciones funcionales.",
+    "interests": "Intereses técnicos",
+    "interestsList": ["Desarrollo Full Stack", "Arquitectura de software", "Inteligencia artificial aplicada", "Experiencias 3D en la web", "Rendimiento y optimización"],
+    "education": "Formación académica",
+    "educationText": "Ingeniería en Sistemas Computacionales",
+    "objective": "Objetivo profesional",
+    "objectiveText": "Continuar creciendo como desarrollador Full Stack, contribuir a proyectos de alto impacto y eventualmente especializarme en arquitecturas de software escalables y experiencias web avanzadas."
+  },
+  "skills": {
+    "title": "Habilidades",
+    "subtitle": "Stack tecnológico",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Bases de datos",
+      "language": "Lenguajes",
+      "tools": "Herramientas"
+    },
+    "levels": {
+      "learning": "Aprendiendo",
+      "intermediate": "Intermedio",
+      "advanced": "Avanzado",
+      "expert": "Experto"
+    }
+  },
+  "experience": {
+    "title": "Experiencia",
+    "subtitle": "Trayectoria profesional",
+    "present": "Presente",
+    "items": {
+      "residency": {
+        "title": "Residencia Profesional — Desarrollador Web",
+        "description": "Desarrollo de sistema web de inventario de equipos para la empresa MyCard. Implementación de frontend con React y backend con ASP.NET Core, integrado con base de datos SQL Server.",
+        "responsibilities": ["Diseño e implementación del sistema de inventario", "Desarrollo de API REST con ASP.NET Core", "Creación de interfaz de usuario con React y TypeScript", "Integración con base de datos SQL Server"]
+      },
+      "degree": {
+        "title": "Ingeniería en Sistemas Computacionales",
+        "description": "Formación universitaria en desarrollo de software, algoritmos, bases de datos, redes y fundamentos de ingeniería de sistemas.",
+        "responsibilities": ["Desarrollo de proyectos académicos en múltiples lenguajes", "Especialización en desarrollo web y aplicaciones de escritorio", "Proyecto de titulación orientado al desarrollo de software"]
+      }
+    }
+  },
+  "lab": {
+    "title": "Laboratorio",
+    "subtitle": "Experimentos creativos",
+    "description": "Un espacio para prototipos, experimentos técnicos y exploraciones creativas. Esta sección crece con cada nuevo aprendizaje.",
+    "comingSoon": "Próximamente",
+    "items": {
+      "techOrb": {
+        "title": "Tech Orb 3D",
+        "description": "Esfera tecnológica interactiva construida con Three.js y React Three Fiber. Responde al movimiento del cursor."
+      },
+      "particleField": {
+        "title": "Campo de partículas",
+        "description": "Sistema de partículas generativas con física simple y colores del tema JOSS.DEV."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "¿Tienes un proyecto en mente?",
+    "description": "Estoy disponible para colaborar en proyectos freelance, oportunidades laborales o simplemente charlar sobre tecnología.",
+    "form": {
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "email": "Correo electrónico",
+      "emailPlaceholder": "tu@correo.com",
+      "message": "Mensaje",
+      "messagePlaceholder": "Cuéntame sobre tu proyecto...",
+      "submit": "Enviar mensaje",
+      "sending": "Enviando...",
+      "successTitle": "¡Mensaje recibido!",
+      "successText": "Gracias por escribirme. Te responderé lo antes posible.",
+      "errorTitle": "Error al enviar",
+      "errorText": "Hubo un problema al enviar el mensaje. Por favor, intenta de nuevo o contáctame directamente por correo.",
+      "pendingNote": "El formulario de contacto está pendiente de conectar con un servicio de envío.",
+      "nameRequired": "El nombre es requerido",
+      "emailRequired": "El correo electrónico es requerido",
+      "emailInvalid": "Por favor introduce un correo válido",
+      "messageRequired": "El mensaje es requerido",
+      "messageMin": "El mensaje debe tener al menos 10 caracteres"
+    },
+    "orContact": "O contáctame directamente",
+    "downloadCv": "Descargar CV",
+    "cvNotAvailable": "CV próximamente"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados",
+    "madeWith": "Hecho con React, TypeScript y Tailwind CSS"
+  },
+  "a11y": {
+    "skipToContent": "Saltar al contenido",
+    "externalLink": "Abre en nueva pestaña"
+  }
+}

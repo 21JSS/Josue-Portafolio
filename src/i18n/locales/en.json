@@ -1,0 +1,157 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "hero": {
+    "available": "Available for projects",
+    "role": "Full Stack Developer",
+    "greeting": "Hi, I'm",
+    "name": "Josué",
+    "tagline": "I build digital solutions that make a difference",
+    "description": "Computer Systems Engineer passionate about modern web development. I create scalable applications, intuitive interfaces and high-impact digital experiences.",
+    "cta_projects": "View projects",
+    "cta_about": "About me",
+    "scroll": "Scroll to explore",
+    "photoAlt": "Profile photo placeholder"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Selected work",
+    "demo": "Live demo",
+    "code": "View code",
+    "noDemo": "Demo coming soon",
+    "noRepo": "Private repository",
+    "items": {
+      "inventory": {
+        "title": "Equipment Inventory System",
+        "description": "Web system developed during professional residency at MyCard to manage and control the company's technology equipment inventory.",
+        "problem": "The company needed to digitalize and centralize control of its technology assets to improve traceability and reduce losses.",
+        "features": "Equipment registration, area assignment, reports, movement history, admin panel"
+      },
+      "imageRecognition": {
+        "title": "Image Recognition with ML",
+        "description": "Machine learning application for image classification and recognition using convolutional neural networks.",
+        "problem": "Explore AI's potential applied to computer vision to solve visual classification problems.",
+        "features": "Real-time classification, custom training, image upload interface, accuracy metrics"
+      },
+      "dotnetApi": {
+        "title": "REST API with ASP.NET Core",
+        "description": "RESTful API built with ASP.NET Core and Entity Framework, following clean architecture principles and security best practices.",
+        "problem": "Create a robust, scalable and documented backend layer to consume from frontend or mobile applications.",
+        "features": "JWT authentication, full CRUD, Swagger documentation, validations, error handling"
+      },
+      "configurable": {
+        "title": "Project to be defined",
+        "description": "This space is reserved for an additional project. Customize the content in src/data/projects.ts.",
+        "problem": "Configurable space for your next featured project.",
+        "features": "Features to be defined"
+      }
+    }
+  },
+  "about": {
+    "title": "About",
+    "subtitle": "Professional profile",
+    "description": "I'm a Computer Systems Engineer focused on Full Stack software development. I'm passionate about building digital products that combine solid engineering with exceptional user experience.",
+    "focus": "My professional focus",
+    "focusText": "I specialize in building modern web applications using React on the frontend and ASP.NET Core or Node.js on the backend. I enjoy solving complex problems and transforming ideas into functional solutions.",
+    "interests": "Technical interests",
+    "interestsList": ["Full Stack Development", "Software Architecture", "Applied Artificial Intelligence", "3D Web Experiences", "Performance & Optimization"],
+    "education": "Education",
+    "educationText": "Computer Systems Engineering Degree",
+    "objective": "Professional objective",
+    "objectiveText": "Continue growing as a Full Stack developer, contribute to high-impact projects and eventually specialize in scalable software architectures and advanced web experiences."
+  },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "Technology stack",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Databases",
+      "language": "Languages",
+      "tools": "Tools"
+    },
+    "levels": {
+      "learning": "Learning",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced",
+      "expert": "Expert"
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "subtitle": "Professional journey",
+    "present": "Present",
+    "items": {
+      "residency": {
+        "title": "Professional Residency — Web Developer",
+        "description": "Development of an equipment inventory web system for MyCard. Frontend implementation with React and backend with ASP.NET Core, integrated with SQL Server database.",
+        "responsibilities": ["Design and implementation of the inventory system", "REST API development with ASP.NET Core", "User interface creation with React and TypeScript", "SQL Server database integration"]
+      },
+      "degree": {
+        "title": "Computer Systems Engineering Degree",
+        "description": "University degree in software development, algorithms, databases, networking and systems engineering fundamentals.",
+        "responsibilities": ["Development of academic projects in multiple languages", "Specialization in web development and desktop applications", "Thesis project focused on software development"]
+      }
+    }
+  },
+  "lab": {
+    "title": "Lab",
+    "subtitle": "Creative experiments",
+    "description": "A space for prototypes, technical experiments and creative explorations. This section grows with every new learning.",
+    "comingSoon": "Coming soon",
+    "items": {
+      "techOrb": {
+        "title": "Tech Orb 3D",
+        "description": "Interactive technological sphere built with Three.js and React Three Fiber. Responds to cursor movement."
+      },
+      "particleField": {
+        "title": "Particle field",
+        "description": "Generative particle system with simple physics and JOSS.DEV theme colors."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Have a project in mind?",
+    "description": "I'm available to collaborate on freelance projects, job opportunities or simply chat about technology.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "message": "Message",
+      "messagePlaceholder": "Tell me about your project...",
+      "submit": "Send message",
+      "sending": "Sending...",
+      "successTitle": "Message received!",
+      "successText": "Thanks for reaching out. I'll get back to you as soon as possible.",
+      "errorTitle": "Send error",
+      "errorText": "There was a problem sending the message. Please try again or contact me directly by email.",
+      "pendingNote": "The contact form is pending connection to a sending service.",
+      "nameRequired": "Name is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Please enter a valid email",
+      "messageRequired": "Message is required",
+      "messageMin": "Message must be at least 10 characters"
+    },
+    "orContact": "Or contact me directly",
+    "downloadCv": "Download CV",
+    "cvNotAvailable": "CV coming soon"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "madeWith": "Made with React, TypeScript and Tailwind CSS"
+  },
+  "a11y": {
+    "skipToContent": "Skip to content",
+    "externalLink": "Opens in new tab"
+  }
+}

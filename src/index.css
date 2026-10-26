@@ -1,1 +1,276 @@
 @import "tailwindcss";
+
+/* ===========================
+   DESIGN TOKENS — JOSS.DEV
+   =========================== */
+@theme {
+  --color-bg-primary: #080A08;
+  --color-bg-secondary: #101410;
+  --color-bg-tertiary: #151A15;
+  --color-bg-card: #111611;
+  --color-accent: #B8FF80;
+  --color-accent-dim: #80F0A0;
+  --color-accent-muted: rgba(184, 255, 128, 0.12);
+  --color-accent-border: rgba(184, 255, 128, 0.25);
+  --color-text-primary: #F4F7F2;
+  --color-text-secondary: #A0AAA0;
+  --color-text-muted: #5A6A5A;
+  --color-border: rgba(184, 255, 128, 0.08);
+  --color-border-subtle: rgba(255, 255, 255, 0.06);
+
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+/* ===========================
+   BASE STYLES
+   =========================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #B8FF80 #101410;
+}
+
+html::-webkit-scrollbar {
+  width: 6px;
+}
+html::-webkit-scrollbar-track {
+  background: #101410;
+}
+html::-webkit-scrollbar-thumb {
+  background: #B8FF80;
+  border-radius: 3px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #080A08;
+  color: #F4F7F2;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+/* ===========================
+   TYPOGRAPHY
+   =========================== */
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    line-height: 1.2;
+    color: #F4F7F2;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+/* ===========================
+   UTILITY CLASSES
+   =========================== */
+.font-display {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+}
+
+.font-body {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.text-accent {
+  color: #B8FF80;
+}
+
+.text-accent-dim {
+  color: #80F0A0;
+}
+
+.bg-card {
+  background-color: #111611;
+  border: 1px solid rgba(184, 255, 128, 0.08);
+}
+
+/* ===========================
+   ANIMATIONS
+   =========================== */
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; box-shadow: 0 0 8px rgba(184, 255, 128, 0.4); }
+  50% { opacity: 0.7; box-shadow: 0 0 16px rgba(184, 255, 128, 0.7); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes scan-line {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+@keyframes rotate-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* ===========================
+   NOISE TEXTURE (SUBTLE)
+   =========================== */
+.noise-overlay::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.3;
+}
+
+/* ===========================
+   GRID PATTERN
+   =========================== */
+.grid-pattern {
+  background-image:
+    linear-gradient(rgba(184, 255, 128, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(184, 255, 128, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* ===========================
+   SECTION BASE
+   =========================== */
+.section {
+  padding: 6.5rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 8rem 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-shell {
+  width: min(100% - 3rem, 1200px);
+  margin-inline: auto;
+}
+
+.main-nav-links {
+  gap: 0.5rem;
+}
+
+.main-nav-link {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 0.75rem;
+  white-space: nowrap;
+  font-size: 0.875rem;
+}
+
+.ui-button {
+  min-height: 2.75rem;
+  padding: 0.75rem 1.5rem;
+  gap: 0.5rem;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+.ui-button--sm {
+  min-height: 2.25rem;
+  padding: 0.5rem 1rem;
+  gap: 0.375rem;
+}
+
+.ui-button--md {
+  min-height: 2.75rem;
+  padding: 0.75rem 1.5rem;
+  gap: 0.5rem;
+}
+
+.ui-button--lg {
+  min-height: 3.25rem;
+  padding: 0.875rem 1.75rem;
+  gap: 0.625rem;
+}
+
+.hero-actions {
+  gap: 1rem;
+}
+
+@media (max-width: 640px) {
+  .hero-actions {
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    width: calc(100% - 2rem);
+  }
+}
+
+/* ===========================
+   SCROLLBAR-OFFSET FOR ANCHORS
+   =========================== */
+section[id] {
+  scroll-margin-top: 80px;
+}
+
+/* ===========================
+   REDUCED MOTION
+   =========================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ===========================
+   FOCUS VISIBLE
+   =========================== */
+:focus-visible {
+  outline: 2px solid #B8FF80;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ===========================
+   SELECTION
+   =========================== */
+::selection {
+  background: rgba(184, 255, 128, 0.2);
+  color: #F4F7F2;
+}
