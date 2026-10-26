@@ -19,7 +19,7 @@ export function Experience() {
         <div className="relative">
           {/* Timeline line */}
           <div
-            className="absolute left-5 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#B8FF80]/30 via-[#B8FF80]/10 to-transparent"
+            className="absolute left-5 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#62E6D2]/30 via-[#62E6D2]/10 to-transparent"
             aria-hidden="true"
           />
 
@@ -45,13 +45,13 @@ export function Experience() {
                 >
                   {/* Timeline dot */}
                   <div
-                    className="relative z-10 flex-shrink-0 w-10 h-10 rounded-full border-2 border-[#B8FF80]/40 bg-[#111611] flex items-center justify-center md:absolute md:left-1/2 md:-translate-x-1/2"
+                    className="relative z-10 flex-shrink-0 w-10 h-10 rounded-full border-2 border-[#62E6D2]/40 bg-[#10202B] flex items-center justify-center md:absolute md:left-1/2 md:-translate-x-1/2"
                     aria-hidden="true"
                   >
                     {item.type === 'work' ? (
-                      <Briefcase size={16} className="text-[#B8FF80]" />
+                      <Briefcase size={16} className="text-[#62E6D2]" />
                     ) : (
-                      <GraduationCap size={16} className="text-[#B8FF80]" />
+                      <GraduationCap size={16} className="text-[#62E6D2]" />
                     )}
                   </div>
 
@@ -63,30 +63,30 @@ export function Experience() {
                         : 'md:pl-12 md:ml-auto'
                     }`}
                   >
-                    <div className="bg-[#111611] border border-[#B8FF80]/08 rounded-2xl p-5 hover:border-[#B8FF80]/20 transition-colors">
-                      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#B8FF80]/20 to-transparent rounded-t-2xl" />
+                    <div className="bg-[#10202B] border border-[#62E6D2]/08 rounded-2xl p-5 hover:border-[#62E6D2]/20 transition-colors">
+                      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#62E6D2]/20 to-transparent rounded-t-2xl" />
 
                       {/* Date + org */}
                       <div className={`flex items-center gap-2 mb-3 ${isRight ? 'md:justify-end' : ''} flex-wrap`}>
-                        <span className="text-xs font-medium text-[#B8FF80] bg-[#B8FF80]/08 border border-[#B8FF80]/20 px-3 py-1 rounded-full">
+                        <span className="text-xs font-medium text-[#62E6D2] bg-[#62E6D2]/08 border border-[#62E6D2]/20 px-3 py-1 rounded-full">
                           {item.startDate} — {item.endDate ?? t('experience.present')}
                         </span>
-                        <span className="text-xs text-[#5A6A5A]">{item.organization}</span>
+                        <span className="text-xs text-[#718591]">{item.organization}</span>
                       </div>
 
-                      <h3 className="font-display font-semibold text-[#F4F7F2] mb-2 text-sm leading-tight">
+                      <h3 className="font-display font-semibold text-[#F2F7FA] mb-2 text-sm leading-tight">
                         {title}
                       </h3>
 
-                      <p className="text-xs text-[#A0AAA0] leading-relaxed mb-3">
+                      <p className="text-xs text-[#A2B4BE] leading-relaxed mb-3">
                         {description}
                       </p>
 
                       {responsibilities?.length > 0 && (
-                        <ul className={`text-xs text-[#5A6A5A] flex flex-col gap-1 ${isRight ? 'md:items-end' : ''}`} role="list">
+                        <ul className={`text-xs text-[#718591] flex flex-col gap-1 ${isRight ? 'md:items-end' : ''}`} role="list">
                           {responsibilities.map((r) => (
                             <li key={r} className="flex items-start gap-1.5">
-                              <span className="text-[#B8FF80] mt-1 flex-shrink-0" aria-hidden="true">▸</span>
+                              <span className="text-[#62E6D2] mt-1 flex-shrink-0" aria-hidden="true">▸</span>
                               {r}
                             </li>
                           ))}
@@ -98,7 +98,7 @@ export function Experience() {
                           {item.tech.map((tech) => (
                             <span
                               key={tech}
-                              className="px-2 py-0.5 rounded-full text-xs bg-white/05 border border-white/08 text-[#A0AAA0]"
+                              className="px-2 py-0.5 rounded-full text-xs bg-white/05 border border-white/08 text-[#A2B4BE]"
                             >
                               {tech}
                             </span>

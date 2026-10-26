@@ -7,9 +7,9 @@ function WebGLFallback() {
     <div className="w-full h-full flex items-center justify-center">
       <div className="relative w-48 h-48">
         {/* CSS fallback orb */}
-        <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#1A4A1A] to-[#080A08] border border-[#B8FF80]/30 shadow-[0_0_60px_rgba(184,255,128,0.15)] animate-float" />
-        <div className="absolute inset-[-8px] rounded-full border border-[#B8FF80]/10 animate-pulse-glow" />
-        <div className="absolute inset-[-16px] rounded-full border border-[#B8FF80]/05" />
+        <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#174C5B] to-[#07111A] border border-[#62E6D2]/30 shadow-[0_0_60px_rgba(98,230,210,0.15)] animate-float" />
+        <div className="absolute inset-[-8px] rounded-full border border-[#62E6D2]/10 animate-pulse-glow" />
+        <div className="absolute inset-[-16px] rounded-full border border-[#62E6D2]/05" />
       </div>
     </div>
   );
@@ -19,15 +19,19 @@ function WebGLFallback() {
 
 export function Scene3D() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [webglSupported, setWebglSupported] = useState(true);
-  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  const [webglSupported, setWebglSupported] = useState<boolean | null>(null);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState<boolean | null>(null);
 
   useEffect(() => {
     // Check WebGL support
     try {
       const canvas = document.createElement('canvas');
       const gl = canvas.getContext('webgl') ?? canvas.getContext('experimental-webgl');
-      if (!gl) setWebglSupported(false);
+      if (gl) {
+        setWebglSupported(true);
+      } else {
+        setWebglSupported(false);
+      }
     } catch {
       setWebglSupported(false);
     }
@@ -40,7 +44,7 @@ export function Scene3D() {
     return () => mq.removeEventListener('change', handler);
   }, []);
 
-  if (!webglSupported || prefersReducedMotion) {
+  if (webglSupported === false || prefersReducedMotion === true) {
     return <WebGLFallback />;
   }
 

@@ -61,7 +61,7 @@ export function Contact() {
   };
 
   const inputBase =
-    'block w-full min-w-0 rounded-xl bg-[#111611] border px-5 py-4 text-base leading-relaxed text-[#F4F7F2] placeholder:text-[#5A6A5A] outline-none transition-all duration-200 focus:border-[#B8FF80]/50 focus:ring-1 focus:ring-[#B8FF80]/30';
+    'block w-full min-w-0 rounded-xl bg-[#10202B] border px-5 py-4 text-base leading-relaxed text-[#F2F7FA] placeholder:text-[#718591] outline-none transition-all duration-200 focus:border-[#62E6D2]/50 focus:ring-1 focus:ring-[#62E6D2]/30';
 
   return (
     <section
@@ -76,7 +76,7 @@ export function Contact() {
           centered
         />
 
-        <p className="text-[#A0AAA0] text-center mb-10 max-w-lg mx-auto">
+        <p className="text-[#A2B4BE] text-center mb-10 max-w-lg mx-auto">
           {t('contact.description')}
         </p>
 
@@ -97,8 +97,8 @@ export function Contact() {
             <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-6" aria-label="Contact form">
               {/* Name */}
               <div>
-                <label htmlFor="contact-name" className="block text-sm font-medium text-[#A0AAA0] mb-2">
-                  {t('contact.form.name')} <span aria-hidden="true" className="text-[#B8FF80]">*</span>
+                <label htmlFor="contact-name" className="block text-sm font-medium text-[#A2B4BE] mb-2">
+                  {t('contact.form.name')} <span aria-hidden="true" className="text-[#62E6D2]">*</span>
                 </label>
                 <input
                   id="contact-name"
@@ -111,7 +111,7 @@ export function Contact() {
                   aria-required="true"
                   aria-invalid={!!errors.name}
                   aria-describedby={errors.name ? 'error-name' : undefined}
-                  className={`${inputBase} ${errors.name ? 'border-red-500/50' : 'border-[#B8FF80]/12'}`}
+                  className={`${inputBase} ${errors.name ? 'border-red-500/50' : 'border-[#62E6D2]/12'}`}
                 />
                 {errors.name && (
                   <p id="error-name" role="alert" className="mt-1 text-xs text-red-400">
@@ -122,8 +122,8 @@ export function Contact() {
 
               {/* Email */}
               <div>
-                <label htmlFor="contact-email" className="block text-sm font-medium text-[#A0AAA0] mb-2">
-                  {t('contact.form.email')} <span aria-hidden="true" className="text-[#B8FF80]">*</span>
+                <label htmlFor="contact-email" className="block text-sm font-medium text-[#A2B4BE] mb-2">
+                  {t('contact.form.email')} <span aria-hidden="true" className="text-[#62E6D2]">*</span>
                 </label>
                 <input
                   id="contact-email"
@@ -136,7 +136,7 @@ export function Contact() {
                   aria-required="true"
                   aria-invalid={!!errors.email}
                   aria-describedby={errors.email ? 'error-email' : undefined}
-                  className={`${inputBase} ${errors.email ? 'border-red-500/50' : 'border-[#B8FF80]/12'}`}
+                  className={`${inputBase} ${errors.email ? 'border-red-500/50' : 'border-[#62E6D2]/12'}`}
                 />
                 {errors.email && (
                   <p id="error-email" role="alert" className="mt-1 text-xs text-red-400">
@@ -147,8 +147,8 @@ export function Contact() {
 
               {/* Message */}
               <div>
-                <label htmlFor="contact-message" className="block text-sm font-medium text-[#A0AAA0] mb-2">
-                  {t('contact.form.message')} <span aria-hidden="true" className="text-[#B8FF80]">*</span>
+                <label htmlFor="contact-message" className="block text-sm font-medium text-[#A2B4BE] mb-2">
+                  {t('contact.form.message')} <span aria-hidden="true" className="text-[#62E6D2]">*</span>
                 </label>
                 <textarea
                   id="contact-message"
@@ -160,7 +160,7 @@ export function Contact() {
                   aria-required="true"
                   aria-invalid={!!errors.message}
                   aria-describedby={errors.message ? 'error-message' : undefined}
-                  className={`${inputBase} min-h-40 resize-y ${errors.message ? 'border-red-500/50' : 'border-[#B8FF80]/12'}`}
+                  className={`${inputBase} min-h-40 resize-y ${errors.message ? 'border-red-500/50' : 'border-[#62E6D2]/12'}`}
                 />
                 {errors.message && (
                   <p id="error-message" role="alert" className="mt-1 text-xs text-red-400">
@@ -181,7 +181,7 @@ export function Contact() {
 
               {/* Status messages */}
               {status === 'success' && (
-                <div role="status" className="flex items-start gap-2 p-3 rounded-xl bg-[#B8FF80]/08 border border-[#B8FF80]/20 text-xs text-[#B8FF80]">
+                <div role="status" className="flex items-start gap-2 p-3 rounded-xl bg-[#62E6D2]/08 border border-[#62E6D2]/20 text-xs text-[#62E6D2]">
                   <CheckCircle2 size={14} className="mt-0.5 flex-shrink-0" />
                   <div>
                     <strong>{t('contact.form.successTitle')}</strong>
@@ -210,7 +210,7 @@ export function Contact() {
             className="flex flex-col gap-6"
           >
             <div>
-              <p className="text-sm font-medium text-[#A0AAA0] mb-4">{t('contact.orContact')}</p>
+              <p className="text-sm font-medium text-[#A2B4BE] mb-4">{t('contact.orContact')}</p>
               <div className="flex items-center gap-3">
                 {socialLinks.map((link) => (
                   <SocialIcon
@@ -223,11 +223,11 @@ export function Contact() {
               </div>
             </div>
 
-            <div className="p-4 rounded-2xl bg-[#111611] border border-[#B8FF80]/08">
-              <p className="text-xs text-[#5A6A5A] mb-1">Email directo</p>
+            <div className="p-4 rounded-2xl bg-[#10202B] border border-[#62E6D2]/08">
+              <p className="text-xs text-[#718591] mb-1">Email directo</p>
               <a
                 href={`mailto:${contactConfig.email}`}
-                className="text-sm text-[#B8FF80] hover:underline"
+                className="text-sm text-[#62E6D2] hover:underline"
               >
                 {contactConfig.email}
               </a>

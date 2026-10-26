@@ -20,9 +20,9 @@ export function Projects() {
           ))}
         </div>
 
-        <p className="mt-8 text-xs text-[#5A6A5A] text-center">
+        <p className="mt-8 text-xs text-[#718591] text-center">
           {t('projects.noRepo')} — {' '}
-          <span className="text-[#A0AAA0]">Proyectos adicionales disponibles en GitHub</span>
+          <span className="text-[#A2B4BE]">Proyectos adicionales disponibles en GitHub</span>
         </p>
       </div>
     </section>

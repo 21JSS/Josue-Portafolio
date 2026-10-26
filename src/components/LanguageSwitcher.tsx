@@ -30,8 +30,8 @@ export function LanguageSwitcher({ className = '' }: LanguageSwitcherProps) {
             relative rounded-full px-3 py-1 text-xs font-medium uppercase tracking-widest
             transition-all duration-200
             ${currentLang === lang
-              ? 'bg-[#B8FF80] text-[#080A08] shadow-[0_0_12px_rgba(184,255,128,0.4)]'
-              : 'text-[#A0AAA0] hover:text-[#F4F7F2]'
+              ? 'bg-[#62E6D2] text-[#07111A] shadow-[0_0_12px_rgba(98,230,210,0.4)]'
+              : 'text-[#A2B4BE] hover:text-[#F2F7FA]'
             }
           `}
         >

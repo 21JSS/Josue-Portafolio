@@ -4,18 +4,19 @@
    DESIGN TOKENS — JOSS.DEV
    =========================== */
 @theme {
-  --color-bg-primary: #080A08;
-  --color-bg-secondary: #101410;
-  --color-bg-tertiary: #151A15;
-  --color-bg-card: #111611;
-  --color-accent: #B8FF80;
-  --color-accent-dim: #80F0A0;
-  --color-accent-muted: rgba(184, 255, 128, 0.12);
-  --color-accent-border: rgba(184, 255, 128, 0.25);
-  --color-text-primary: #F4F7F2;
-  --color-text-secondary: #A0AAA0;
-  --color-text-muted: #5A6A5A;
-  --color-border: rgba(184, 255, 128, 0.08);
+  --color-bg-primary: #07111A;
+  --color-bg-secondary: #0D1B27;
+  --color-bg-tertiary: #142532;
+  --color-bg-card: #10202B;
+  --color-accent: #62E6D2;
+  --color-accent-dim: #55B8D8;
+  --color-accent-warm: #F4B860;
+  --color-accent-muted: rgba(98, 230, 210, 0.12);
+  --color-accent-border: rgba(98, 230, 210, 0.25);
+  --color-text-primary: #F2F7FA;
+  --color-text-secondary: #A2B4BE;
+  --color-text-muted: #718591;
+  --color-border: rgba(98, 230, 210, 0.08);
   --color-border-subtle: rgba(255, 255, 255, 0.06);
 
   --font-display: 'Space Grotesk', system-ui, sans-serif;
@@ -33,24 +34,25 @@
 html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
-  scrollbar-color: #B8FF80 #101410;
+  scrollbar-color: #62E6D2 #0D1B27;
 }
 
 html::-webkit-scrollbar {
   width: 6px;
 }
 html::-webkit-scrollbar-track {
-  background: #101410;
+  background: #0D1B27;
 }
 html::-webkit-scrollbar-thumb {
-  background: #B8FF80;
+  background: #62E6D2;
   border-radius: 3px;
 }
 
 body {
   font-family: var(--font-body);
-  background-color: #080A08;
-  color: #F4F7F2;
+  background-color: #07111A;
+  background-image: radial-gradient(ellipse at 50% -25%, rgba(98, 230, 210, 0.08), transparent 55%);
+  color: #F2F7FA;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -69,7 +71,7 @@ body {
     font-family: var(--font-display);
     font-weight: 600;
     line-height: 1.2;
-    color: #F4F7F2;
+    color: #F2F7FA;
   }
 
   a {
@@ -90,24 +92,24 @@ body {
 }
 
 .text-accent {
-  color: #B8FF80;
+  color: #62E6D2;
 }
 
 .text-accent-dim {
-  color: #80F0A0;
+  color: #55B8D8;
 }
 
 .bg-card {
-  background-color: #111611;
-  border: 1px solid rgba(184, 255, 128, 0.08);
+  background-color: #10202B;
+  border: 1px solid rgba(98, 230, 210, 0.08);
 }
 
 /* ===========================
    ANIMATIONS
    =========================== */
 @keyframes pulse-glow {
-  0%, 100% { opacity: 1; box-shadow: 0 0 8px rgba(184, 255, 128, 0.4); }
-  50% { opacity: 0.7; box-shadow: 0 0 16px rgba(184, 255, 128, 0.7); }
+  0%, 100% { opacity: 1; box-shadow: 0 0 8px rgba(98, 230, 210, 0.4); }
+  50% { opacity: 0.7; box-shadow: 0 0 16px rgba(98, 230, 210, 0.7); }
 }
 
 @keyframes float {
@@ -151,8 +153,8 @@ body {
    =========================== */
 .grid-pattern {
   background-image:
-    linear-gradient(rgba(184, 255, 128, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(184, 255, 128, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(98, 230, 210, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(98, 230, 210, 0.03) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
@@ -262,7 +264,7 @@ section[id] {
    FOCUS VISIBLE
    =========================== */
 :focus-visible {
-  outline: 2px solid #B8FF80;
+  outline: 2px solid #62E6D2;
   outline-offset: 2px;
   border-radius: 4px;
 }
@@ -271,6 +273,6 @@ section[id] {
    SELECTION
    =========================== */
 ::selection {
-  background: rgba(184, 255, 128, 0.2);
-  color: #F4F7F2;
+  background: rgba(98, 230, 210, 0.2);
+  color: #F2F7FA;
 }

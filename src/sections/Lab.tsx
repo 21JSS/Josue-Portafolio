@@ -13,7 +13,7 @@ export function Lab() {
       <div className="section-container">
         <SectionHeading titleKey="lab.title" subtitleKey="lab.subtitle" />
 
-        <p className="text-[#A0AAA0] mb-10 max-w-lg">{t('lab.description')}</p>
+        <p className="text-[#A2B4BE] mb-10 max-w-lg">{t('lab.description')}</p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {LAB_ITEMS.map((key, i) => (
@@ -23,24 +23,24 @@ export function Lab() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
               viewport={{ once: true }}
-              className="relative p-5 rounded-2xl bg-[#111611] border border-[#B8FF80]/08 hover:border-[#B8FF80]/20 transition-all group cursor-default"
+              className="relative p-5 rounded-2xl bg-[#10202B] border border-[#62E6D2]/08 hover:border-[#62E6D2]/20 transition-all group cursor-default"
             >
-              <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#B8FF80]/15 to-transparent" />
+              <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#62E6D2]/15 to-transparent" />
 
               <div className="flex items-start justify-between mb-4">
-                <div className="w-10 h-10 rounded-xl bg-[#B8FF80]/08 border border-[#B8FF80]/15 flex items-center justify-center">
-                  <FlaskConical size={18} className="text-[#B8FF80]" />
+                <div className="w-10 h-10 rounded-xl bg-[#62E6D2]/08 border border-[#62E6D2]/15 flex items-center justify-center">
+                  <FlaskConical size={18} className="text-[#62E6D2]" />
                 </div>
-                <div className="flex items-center gap-1.5 text-xs text-[#5A6A5A]">
+                <div className="flex items-center gap-1.5 text-xs text-[#718591]">
                   <Clock size={12} />
                   {t('lab.comingSoon')}
                 </div>
               </div>
 
-              <h3 className="font-display font-semibold text-[#F4F7F2] text-sm mb-2 group-hover:text-[#B8FF80] transition-colors">
+              <h3 className="font-display font-semibold text-[#F2F7FA] text-sm mb-2 group-hover:text-[#62E6D2] transition-colors">
                 {t(`lab.items.${key}.title`)}
               </h3>
-              <p className="text-xs text-[#A0AAA0] leading-relaxed">
+              <p className="text-xs text-[#A2B4BE] leading-relaxed">
                 {t(`lab.items.${key}.description`)}
               </p>
             </motion.div>
@@ -52,10 +52,10 @@ export function Lab() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: LAB_ITEMS.length * 0.1 }}
             viewport={{ once: true }}
-            className="flex items-center justify-center p-5 rounded-2xl border border-dashed border-[#B8FF80]/12 text-[#5A6A5A] text-sm text-center"
+            className="flex items-center justify-center p-5 rounded-2xl border border-dashed border-[#62E6D2]/12 text-[#718591] text-sm text-center"
           >
             <div>
-              <p className="font-display font-medium text-[#A0AAA0] mb-1">Más experimentos</p>
+              <p className="font-display font-medium text-[#A2B4BE] mb-1">Más experimentos</p>
               <p className="text-xs">próximamente...</p>
             </div>
           </motion.div>

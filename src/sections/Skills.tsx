@@ -34,7 +34,7 @@ export function Skills() {
                 transition={{ duration: 0.5, delay: catIndex * 0.08 }}
                 viewport={{ once: true }}
               >
-                <h3 className="text-xs font-medium tracking-[0.2em] uppercase text-[#B8FF80] mb-5">
+                <h3 className="text-xs font-medium tracking-[0.2em] uppercase text-[#62E6D2] mb-5">
                   {t(`skills.categories.${cat}`)}
                 </h3>
 
@@ -49,13 +49,13 @@ export function Skills() {
                   ))}
                 </div>
 
-                <div className="mt-5 h-px bg-gradient-to-r from-[#B8FF80]/10 to-transparent" />
+                <div className="mt-5 h-px bg-gradient-to-r from-[#62E6D2]/10 to-transparent" />
               </motion.div>
             );
           })}
         </div>
 
-        <p className="mt-8 text-xs text-[#5A6A5A] text-center">
+        <p className="mt-8 text-xs text-[#718591] text-center">
           Pasa el cursor sobre cada icono para ver el nivel de dominio
         </p>
       </div>

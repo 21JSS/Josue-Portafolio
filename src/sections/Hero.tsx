@@ -36,12 +36,12 @@ export function Hero() {
       {/* Gradient blobs */}
       <div
         className="pointer-events-none absolute top-1/4 left-1/4 w-96 h-96 rounded-full opacity-10 blur-3xl"
-        style={{ background: 'radial-gradient(circle, #B8FF80 0%, transparent 70%)' }}
+        style={{ background: 'radial-gradient(circle, #62E6D2 0%, transparent 70%)' }}
         aria-hidden="true"
       />
       <div
         className="pointer-events-none absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full opacity-[0.05] blur-3xl"
-        style={{ background: 'radial-gradient(circle, #80F0A0 0%, transparent 70%)' }}
+        style={{ background: 'radial-gradient(circle, #55B8D8 0%, transparent 70%)' }}
         aria-hidden="true"
       />
 
@@ -57,34 +57,34 @@ export function Hero() {
           >
             {/* Availability badge */}
             <motion.div variants={fadeUp}>
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#B8FF80]/20 bg-[#B8FF80]/08 px-4 py-2">
-                <span className="w-2 h-2 rounded-full bg-[#B8FF80] animate-pulse-glow" aria-hidden="true" />
-                <span className="text-xs font-medium text-[#B8FF80] tracking-wide">
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#62E6D2]/20 bg-[#62E6D2]/08 px-4 py-2">
+                <span className="w-2 h-2 rounded-full bg-[#62E6D2] animate-pulse-glow" aria-hidden="true" />
+                <span className="text-xs font-medium text-[#62E6D2] tracking-wide">
                   {t('hero.available')}
                 </span>
               </div>
             </motion.div>
 
             {/* Role label */}
-            <motion.p variants={fadeUp} className="text-sm font-medium tracking-[0.2em] uppercase text-[#A0AAA0]">
+            <motion.p variants={fadeUp} className="text-sm font-medium tracking-[0.2em] uppercase text-[#A2B4BE]">
               {t('hero.role')}
             </motion.p>
 
             {/* Main heading */}
             <motion.div variants={fadeUp}>
               <h1 id="hero-heading" className="font-display font-bold leading-none">
-                <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#F4F7F2]">
+                <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#F2F7FA]">
                   {t('hero.greeting')}{' '}
-                  <span className="text-[#B8FF80]">{t('hero.name')}</span>
+                  <span className="text-[#62E6D2]">{t('hero.name')}</span>
                 </span>
               </h1>
-              <p className="mt-4 text-xl sm:text-2xl md:text-3xl font-display font-medium text-[#A0AAA0] leading-snug">
+              <p className="mt-4 text-xl sm:text-2xl md:text-3xl font-display font-medium text-[#A2B4BE] leading-snug">
                 {t('hero.tagline')}
               </p>
             </motion.div>
 
             {/* Description */}
-            <motion.p variants={fadeUp} className="text-base text-[#A0AAA0] leading-relaxed max-w-md">
+            <motion.p variants={fadeUp} className="text-base text-[#A2B4BE] leading-relaxed max-w-md">
               {t('hero.description')}
             </motion.p>
 
@@ -130,7 +130,7 @@ export function Hero() {
             <div className="h-72 w-full max-w-xl sm:h-80 lg:h-[28rem]">
               <Suspense fallback={
                 <div className="w-full h-full flex items-center justify-center">
-                  <div className="w-8 h-8 rounded-full border-2 border-[#B8FF80]/30 border-t-[#B8FF80] animate-spin" />
+                  <div className="w-8 h-8 rounded-full border-2 border-[#62E6D2]/30 border-t-[#62E6D2] animate-spin" />
                 </div>
               }>
                 <Scene3D />
@@ -148,12 +148,12 @@ export function Hero() {
         className="absolute bottom-3 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 sm:bottom-6"
         aria-hidden="true"
       >
-        <span className="text-xs text-[#5A6A5A] tracking-widest uppercase">{t('hero.scroll')}</span>
+        <span className="text-xs text-[#718591] tracking-widest uppercase">{t('hero.scroll')}</span>
         <motion.div
           animate={{ y: [0, 6, 0] }}
           transition={{ repeat: Infinity, duration: 1.5, ease: 'easeInOut' }}
         >
-          <ArrowDown size={16} className="text-[#B8FF80]/50" />
+          <ArrowDown size={16} className="text-[#62E6D2]/50" />
         </motion.div>
       </motion.div>
     </section>

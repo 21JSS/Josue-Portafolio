@@ -18,11 +18,11 @@ type Props = ButtonProps | LinkProps;
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    'bg-[#B8FF80] text-[#080A08] font-semibold hover:bg-[#A0F060] shadow-[0_0_20px_rgba(184,255,128,0.25)] hover:shadow-[0_0_30px_rgba(184,255,128,0.4)]',
+    'bg-[#62E6D2] text-[#07111A] font-semibold hover:bg-[#7AF0DD] shadow-[0_0_20px_rgba(98,230,210,0.25)] hover:shadow-[0_0_30px_rgba(98,230,210,0.4)]',
   secondary:
-    'bg-transparent border border-[#B8FF80]/40 text-[#B8FF80] hover:bg-[#B8FF80]/10 hover:border-[#B8FF80]/70',
+    'bg-transparent border border-[#62E6D2]/40 text-[#62E6D2] hover:bg-[#62E6D2]/10 hover:border-[#62E6D2]/70',
   ghost:
-    'bg-transparent text-[#A0AAA0] hover:text-[#F4F7F2] hover:bg-white/05',
+    'bg-transparent text-[#A2B4BE] hover:text-[#F2F7FA] hover:bg-white/05',
 };
 
 const sizeStyles: Record<ButtonSize, string> = {
@@ -33,7 +33,7 @@ const sizeStyles: Record<ButtonSize, string> = {
 
 export function Button({ variant = 'primary', size = 'md', children, className = '', icon, ...props }: Props) {
   const base =
-    'ui-button inline-flex items-center justify-center rounded-full font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8FF80] active:scale-95';
+    'ui-button inline-flex items-center justify-center rounded-full font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#62E6D2] active:scale-95';
   const classes = `${base} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
 
   if ('href' in props && props.href !== undefined) {

@@ -40,7 +40,7 @@ export function SocialIcon({
     borderColor: hovered ? borderColor : 'rgba(255,255,255,0.1)',
     boxShadow: hovered ? `0 0 20px ${bgColor}, 0 0 40px ${bgColor}` : 'none',
     transform: hovered ? 'scale(1.12)' : 'scale(1)',
-    color: hovered ? color : '#A0AAA0',
+    color: hovered ? color : '#A2B4BE',
     transition: 'all 0.2s cubic-bezier(0.4,0,0.2,1)',
   };
 
@@ -55,7 +55,7 @@ export function SocialIcon({
       <Icon size={icon} />
       {showTooltip && (
         <span
-          className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-[#151A15] border border-white/10 px-2 py-0.5 text-xs text-[#F4F7F2] opacity-0 pointer-events-none transition-opacity duration-150 group-hover:opacity-100"
+          className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-[#142532] border border-white/10 px-2 py-0.5 text-xs text-[#F2F7FA] opacity-0 pointer-events-none transition-opacity duration-150 group-hover:opacity-100"
           role="tooltip"
           aria-hidden="true"
         >
@@ -73,7 +73,7 @@ export function SocialIcon({
         rel={isExternal ? 'noopener noreferrer' : undefined}
         aria-label={`${name}${isExternal ? ' (abre en nueva pestaña)' : ''}`}
         onClick={onClick}
-        className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8FF80] rounded-full"
+        className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#62E6D2] rounded-full"
       >
         {inner}
       </a>
@@ -84,7 +84,7 @@ export function SocialIcon({
     <button
       onClick={onClick}
       aria-label={name}
-      className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8FF80] rounded-full"
+      className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#62E6D2] rounded-full"
     >
       {inner}
     </button>

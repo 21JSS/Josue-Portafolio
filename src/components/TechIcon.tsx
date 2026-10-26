@@ -43,7 +43,7 @@ export function TechIcon({ name, icon, color, bgColor, borderColor, level, size 
           borderColor: hovered ? borderColor : 'rgba(255,255,255,0.1)',
           boxShadow: hovered ? `0 0 20px ${bgColor}` : 'none',
           transform: hovered ? 'scale(1.06)' : 'scale(1)',
-          color: hovered ? color : '#A0AAA0',
+          color: hovered ? color : '#A2B4BE',
         }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
@@ -58,7 +58,7 @@ export function TechIcon({ name, icon, color, bgColor, borderColor, level, size 
 
         {/* Tooltip */}
         <span
-          className="absolute -bottom-9 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-[#151A15] border border-white/10 px-2 py-0.5 text-xs text-[#F4F7F2] opacity-0 pointer-events-none transition-opacity duration-150 group-hover:opacity-100 z-10"
+          className="absolute -bottom-9 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-[#142532] border border-white/10 px-2 py-0.5 text-xs text-[#F2F7FA] opacity-0 pointer-events-none transition-opacity duration-150 group-hover:opacity-100 z-10"
           role="tooltip"
           aria-hidden="true"
         >
@@ -70,7 +70,7 @@ export function TechIcon({ name, icon, color, bgColor, borderColor, level, size 
       </div>
 
       {showLabel && (
-        <span className="text-xs text-[#A0AAA0] font-medium text-center leading-tight max-w-[60px] truncate">
+        <span className="text-xs text-[#A2B4BE] font-medium text-center leading-tight max-w-[60px] truncate">
           {name}
         </span>
       )}

@@ -35,17 +35,17 @@ export function ProfilePhotoPlaceholder({
     >
       {/* Outer halo */}
       <div
-        className={`absolute inset-[-8px] rounded-full border border-[#B8FF80]/10 ${animate ? 'animate-pulse-glow' : ''}`}
+        className={`absolute inset-[-8px] rounded-full border border-[#62E6D2]/10 ${animate ? 'animate-pulse-glow' : ''}`}
         aria-hidden="true"
       />
       {/* Second halo */}
       <div
-        className="absolute inset-[-16px] rounded-full border border-[#B8FF80]/05"
+        className="absolute inset-[-16px] rounded-full border border-[#62E6D2]/05"
         aria-hidden="true"
       />
 
       {/* Main circle */}
-      <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-[#B8FF80]/40 shadow-[0_0_40px_rgba(184,255,128,0.15),inset_0_0_40px_rgba(184,255,128,0.05)] bg-gradient-to-br from-[#111611] to-[#080A08]">
+      <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-[#62E6D2]/40 shadow-[0_0_40px_rgba(98,230,210,0.15),inset_0_0_40px_rgba(98,230,210,0.05)] bg-gradient-to-br from-[#10202B] to-[#07111A]">
         {photoUrl ? (
           <img
             src={photoUrl}
@@ -56,15 +56,15 @@ export function ProfilePhotoPlaceholder({
           /* Empty interior — ready for a future photo */
           <div className="w-full h-full" aria-hidden="true">
             {/* Subtle corner accent lines */}
-            <div className="absolute top-4 left-4 w-6 h-6 border-l border-t border-[#B8FF80]/20 rounded-tl-sm" />
-            <div className="absolute bottom-4 right-4 w-6 h-6 border-r border-b border-[#B8FF80]/20 rounded-br-sm" />
+            <div className="absolute top-4 left-4 w-6 h-6 border-l border-t border-[#62E6D2]/20 rounded-tl-sm" />
+            <div className="absolute bottom-4 right-4 w-6 h-6 border-r border-b border-[#62E6D2]/20 rounded-br-sm" />
           </div>
         )}
       </div>
 
       {/* Status indicator dot */}
       <div
-        className="absolute bottom-3 right-3 w-3.5 h-3.5 rounded-full bg-[#B8FF80] border-2 border-[#080A08] animate-pulse-glow"
+        className="absolute bottom-3 right-3 w-3.5 h-3.5 rounded-full bg-[#62E6D2] border-2 border-[#07111A] animate-pulse-glow"
         aria-hidden="true"
       />
     </div>

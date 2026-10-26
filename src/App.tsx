@@ -9,13 +9,13 @@ import { Contact } from './sections/Contact';
 
 function Footer() {
   return (
-    <footer className="border-t border-[#B8FF80]/08 py-8 px-4 text-center" role="contentinfo">
-      <p className="text-xs text-[#5A6A5A]">
+    <footer className="border-t border-[#62E6D2]/08 py-8 px-4 text-center" role="contentinfo">
+      <p className="text-xs text-[#718591]">
         © {new Date().getFullYear()}{' '}
-        <span className="text-[#B8FF80] font-display font-semibold">JOSS.DEV</span>
+        <span className="text-[#62E6D2] font-display font-semibold">JOSS.DEV</span>
         {' '}— Todos los derechos reservados
       </p>
-      <p className="text-xs text-[#5A6A5A] mt-1">
+      <p className="text-xs text-[#718591] mt-1">
         Construido con React, TypeScript, Tailwind CSS & Three.js
       </p>
     </footer>
@@ -24,7 +24,7 @@ function Footer() {
 
 function App() {
   return (
-    <div className="min-h-svh bg-[#080A08] text-[#F4F7F2] overflow-x-hidden">
+    <div className="min-h-svh bg-[#07111A] text-[#F2F7FA] overflow-x-hidden">
       <Navbar />
       <main id="main-content">
         <Hero />

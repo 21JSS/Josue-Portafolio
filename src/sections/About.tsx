@@ -9,17 +9,17 @@ export function About() {
 
   const cards = [
     {
-      icon: <Code2 size={20} className="text-[#B8FF80]" />,
+      icon: <Code2 size={20} className="text-[#62E6D2]" />,
       titleKey: 'about.focus',
       textKey: 'about.focusText',
     },
     {
-      icon: <BookOpen size={20} className="text-[#B8FF80]" />,
+      icon: <BookOpen size={20} className="text-[#62E6D2]" />,
       titleKey: 'about.education',
       textKey: 'about.educationText',
     },
     {
-      icon: <Target size={20} className="text-[#B8FF80]" />,
+      icon: <Target size={20} className="text-[#62E6D2]" />,
       titleKey: 'about.objective',
       textKey: 'about.objectiveText',
     },
@@ -43,25 +43,25 @@ export function About() {
             viewport={{ once: true }}
             className="flex flex-col gap-6"
           >
-            <p className="text-[#A0AAA0] leading-relaxed text-base">
+            <p className="text-[#A2B4BE] leading-relaxed text-base">
               {t('about.description')}
             </p>
 
-            <p className="text-[#A0AAA0] leading-relaxed text-base">
+            <p className="text-[#A2B4BE] leading-relaxed text-base">
               {t('about.focusText')}
             </p>
 
             {/* Interests */}
             <div>
-              <h3 className="font-display font-semibold text-[#F4F7F2] mb-4 flex items-center gap-2">
-                <Cpu size={18} className="text-[#B8FF80]" />
+              <h3 className="font-display font-semibold text-[#F2F7FA] mb-4 flex items-center gap-2">
+                <Cpu size={18} className="text-[#62E6D2]" />
                 {t('about.interests')}
               </h3>
               <ul className="flex flex-wrap gap-2" role="list">
                 {interests.map((item) => (
                   <li
                     key={item}
-                    className="px-3 py-1.5 rounded-full border border-[#B8FF80]/20 bg-[#B8FF80]/06 text-sm text-[#B8FF80]"
+                    className="px-3 py-1.5 rounded-full border border-[#62E6D2]/20 bg-[#62E6D2]/06 text-sm text-[#62E6D2]"
                   >
                     {item}
                   </li>
@@ -79,18 +79,18 @@ export function About() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="relative p-5 rounded-2xl bg-[#111611] border border-[#B8FF80]/08 hover:border-[#B8FF80]/20 transition-colors group"
+                className="relative p-5 rounded-2xl bg-[#10202B] border border-[#62E6D2]/08 hover:border-[#62E6D2]/20 transition-colors group"
               >
-                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#B8FF80]/20 to-transparent" />
+                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#62E6D2]/20 to-transparent" />
                 <div className="flex items-start gap-3">
-                  <div className="mt-0.5 w-8 h-8 rounded-full bg-[#B8FF80]/10 border border-[#B8FF80]/20 flex items-center justify-center flex-shrink-0">
+                  <div className="mt-0.5 w-8 h-8 rounded-full bg-[#62E6D2]/10 border border-[#62E6D2]/20 flex items-center justify-center flex-shrink-0">
                     {card.icon}
                   </div>
                   <div>
-                    <h3 className="font-display font-semibold text-[#F4F7F2] mb-1 text-sm">
+                    <h3 className="font-display font-semibold text-[#F2F7FA] mb-1 text-sm">
                       {t(card.titleKey)}
                     </h3>
-                    <p className="text-sm text-[#A0AAA0] leading-relaxed">
+                    <p className="text-sm text-[#A2B4BE] leading-relaxed">
                       {t(card.textKey)}
                     </p>
                   </div>

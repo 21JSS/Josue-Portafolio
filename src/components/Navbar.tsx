@@ -62,14 +62,14 @@ export function Navbar() {
   return (
     <header
       className={`fixed top-2 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-        ? 'bg-[#080A08]/90 backdrop-blur-md border-b border-[#B8FF80]/08 shadow-[0_1px_0_rgba(184,255,128,0.05)]'
+        ? 'bg-[#07111A]/90 backdrop-blur-md border-b border-[#62E6D2]/08 shadow-[0_1px_0_rgba(98,230,210,0.05)]'
         : 'bg-transparent'
         }`}
       role="banner"
     >
       <a
         href="#hero"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-5 focus:left-5 bg-[#B8FF80] text-[#080A08] px-4 py-2 rounded-full text-sm font-medium z-50"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-5 focus:left-5 bg-[#62E6D2] text-[#07111A] px-4 py-2 rounded-full text-sm font-medium z-50"
       >
         {t('a11y.skipToContent')}
       </a>
@@ -81,10 +81,10 @@ export function Navbar() {
         {/* Brand */}
         <button
           onClick={() => scrollTo('hero')}
-          className="font-display text-2xl font-bold tracking-tight text-[#F4F7F2] hover:text-[#B8FF80] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8FF80] rounded"
+          className="font-display text-2xl font-bold tracking-tight text-[#F2F7FA] hover:text-[#62E6D2] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#62E6D2] rounded"
           aria-label="JOSS.DEV — Go to top"
         >
-          JOSS<span className="text-[#B8FF80] text-2xl" >.DEV</span>
+          JOSS<span className="text-[#62E6D2] text-2xl" >.DEV</span>
         </button>
 
         {/* Desktop links */}
@@ -94,16 +94,16 @@ export function Navbar() {
               <button
                 onClick={() => scrollTo(SECTION_IDS[key])}
                 aria-current={active === key ? 'page' : undefined}
-                className={`main-nav-link relative rounded-full transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8FF80] ${active === key
-                  ? 'text-[#B8FF80]'
-                  : 'text-[#A0AAA0] hover:text-[#F4F7F2]'
+                className={`main-nav-link relative rounded-full transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#62E6D2] ${active === key
+                  ? 'text-[#62E6D2]'
+                  : 'text-[#A2B4BE] hover:text-[#F2F7FA]'
                   }`}
               >
                 <span className="relative z-10">{t(`nav.${key}`)}</span>
                 {active === key && (
                   <motion.span
                     layoutId="nav-indicator"
-                    className="absolute inset-0 z-0 rounded-full bg-[#B8FF80]/10 border border-[#B8FF80]/20"
+                    className="absolute inset-0 z-0 rounded-full bg-[#62E6D2]/10 border border-[#62E6D2]/20"
                     transition={{ type: 'spring', stiffness: 400, damping: 35 }}
                   />
                 )}
@@ -120,7 +120,7 @@ export function Navbar() {
             onClick={() => setOpen((v) => !v)}
             aria-label={open ? t('nav.closeMenu') : t('nav.openMenu')}
             aria-expanded={open}
-            className="flex md:hidden items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-white/05 text-[#A0AAA0] hover:text-[#F4F7F2] hover:border-[#B8FF80]/30 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8FF80]"
+            className="flex md:hidden items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-white/05 text-[#A2B4BE] hover:text-[#F2F7FA] hover:border-[#62E6D2]/30 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#62E6D2]"
           >
             {open ? <X size={18} /> : <Menu size={18} />}
           </button>
@@ -136,7 +136,7 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden border-t border-[#B8FF80]/08 bg-[#080A08]/95 backdrop-blur-md"
+            className="md:hidden border-t border-[#62E6D2]/08 bg-[#07111A]/95 backdrop-blur-md"
           >
             <ul className="flex flex-col px-4 py-4 gap-1" role="list">
               {NAV_LINKS.map((key, i) => (
@@ -150,8 +150,8 @@ export function Navbar() {
                     onClick={() => scrollTo(SECTION_IDS[key])}
                     aria-current={active === key ? 'page' : undefined}
                     className={`w-full text-left px-4 py-3 rounded-xl text-sm transition-all duration-150 ${active === key
-                      ? 'bg-[#B8FF80]/10 text-[#B8FF80] border border-[#B8FF80]/20'
-                      : 'text-[#A0AAA0] hover:text-[#F4F7F2] hover:bg-white/05'
+                      ? 'bg-[#62E6D2]/10 text-[#62E6D2] border border-[#62E6D2]/20'
+                      : 'text-[#A2B4BE] hover:text-[#F2F7FA] hover:bg-white/05'
                       }`}
                   >
                     {t(`nav.${key}`)}
