@@ -4,11 +4,10 @@ import { useTranslation } from 'react-i18next';
 import { Menu, X } from 'lucide-react';
 import { LanguageSwitcher } from './LanguageSwitcher';
 
-const NAV_LINKS = ['home', 'projects', 'about', 'skills', 'experience', 'contact'] as const;
+const NAV_LINKS = ['home', 'about', 'skills', 'experience', 'contact'] as const;
 
 const SECTION_IDS: Record<typeof NAV_LINKS[number], string> = {
   home: 'hero',
-  projects: 'projects',
   about: 'about',
   skills: 'skills',
   experience: 'experience',

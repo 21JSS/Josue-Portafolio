@@ -1,6 +1,22 @@
-import { Suspense, useRef, useEffect, useState } from 'react';
+import { Suspense, useSyncExternalStore } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { TechOrb } from './TechOrb';
+
+const webglSupported = (() => {
+  try {
+    const canvas = document.createElement('canvas');
+    return Boolean(canvas.getContext('webgl') ?? canvas.getContext('experimental-webgl'));
+  } catch {
+    return false;
+  }
+})();
+
+const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+function subscribeToMotionPreference(onChange: () => void) {
+  motionPreference.addEventListener('change', onChange);
+  return () => motionPreference.removeEventListener('change', onChange);
+}
 
 function WebGLFallback() {
   return (
@@ -18,38 +34,18 @@ function WebGLFallback() {
 
 
 export function Scene3D() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [webglSupported, setWebglSupported] = useState<boolean | null>(null);
-  const [prefersReducedMotion, setPrefersReducedMotion] = useState<boolean | null>(null);
-
-  useEffect(() => {
-    // Check WebGL support
-    try {
-      const canvas = document.createElement('canvas');
-      const gl = canvas.getContext('webgl') ?? canvas.getContext('experimental-webgl');
-      if (gl) {
-        setWebglSupported(true);
-      } else {
-        setWebglSupported(false);
-      }
-    } catch {
-      setWebglSupported(false);
-    }
-
-    // Check motion preference
-    const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
-    setPrefersReducedMotion(mq.matches);
-    const handler = (e: MediaQueryListEvent) => setPrefersReducedMotion(e.matches);
-    mq.addEventListener('change', handler);
-    return () => mq.removeEventListener('change', handler);
-  }, []);
+  const prefersReducedMotion = useSyncExternalStore(
+    subscribeToMotionPreference,
+    () => motionPreference.matches,
+    () => false
+  );
 
   if (webglSupported === false || prefersReducedMotion === true) {
     return <WebGLFallback />;
   }
 
   return (
-    <div ref={containerRef} className="w-full h-full" aria-hidden="true">
+    <div className="w-full h-full" aria-hidden="true">
       <Canvas
         camera={{ position: [0, 0, 5.4], fov: 45 }}
         dpr={[1, 1.5]}

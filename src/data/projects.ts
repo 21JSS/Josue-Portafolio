@@ -26,14 +26,6 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    id: 'dotnet-api',
-    key: 'projects.items.dotnetApi',
-    tech: ['ASP.NET Core', 'C#', 'Entity Framework', 'SQL Server', 'REST API'],
-    repoUrl: '',
-    demoUrl: '',
-    featured: true,
-  },
-  {
     id: 'configurable-project',
     key: 'projects.items.configurable',
     tech: ['React', 'TypeScript', 'Node.js'],

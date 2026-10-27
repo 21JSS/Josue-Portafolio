@@ -28,7 +28,7 @@ export function About() {
   return (
     <section
       id="about"
-      className="section bg-[#0A0F0A]"
+      className="section bg-[#07111A]"
       aria-labelledby="about-heading"
     >
       <div className="section-container">

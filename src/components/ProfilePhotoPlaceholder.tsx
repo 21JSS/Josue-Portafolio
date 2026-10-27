@@ -50,7 +50,9 @@ export function ProfilePhotoPlaceholder({
           <img
             src={photoUrl}
             alt={alt}
-            className="w-full h-full object-cover"
+            className="h-full w-full object-cover object-[center_44%]"
+            decoding="async"
+            fetchPriority="high"
           />
         ) : (
           /* Empty interior — ready for a future photo */

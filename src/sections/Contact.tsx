@@ -66,7 +66,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="section bg-[#0A0F0A]"
+      className="section bg-[#07111A]"
       aria-labelledby="contact-heading"
     >
       <div className="section-container">

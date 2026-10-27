@@ -21,7 +21,7 @@ export const experience: ExperienceItem[] = [
   {
     id: 'engineering-degree',
     key: 'experience.items.degree',
-    organization: 'Universidad TecNM / ITSCH',
+    organization: 'Universidad TecNM / Campus ITQ',
     type: 'education',
     startDate: '2020',
     endDate: '2025',

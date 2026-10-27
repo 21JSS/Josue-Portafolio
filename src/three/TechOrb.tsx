@@ -1,6 +1,6 @@
 import { useRef, useMemo } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { Sphere, MeshDistortMaterial, Float, Stars } from '@react-three/drei';
+import { Sphere, MeshDistortMaterial, Float } from '@react-three/drei';
 import * as THREE from 'three';
 
 function RingOrbit({ radius, tilt, speed, color }: { radius: number; tilt: number; speed: number; color: string }) {
@@ -51,7 +51,61 @@ function Particles() {
           attach="attributes-position"
         />
       </bufferGeometry>
-      <pointsMaterial color="#55B8D8" size={0.025} transparent opacity={0.7} sizeAttenuation />
+      <pointsMaterial color="#55B8D8" size={0.045} transparent opacity={0.7} sizeAttenuation />
+    </points>
+  );
+}
+
+function PortraitOrbit() {
+  const ref = useRef<THREE.Points>(null);
+  const { positions, colors } = useMemo(() => {
+    const pointCount = 210;
+    const points = new Float32Array(pointCount * 3);
+    const tints = new Float32Array(pointCount * 3);
+    const palette = [new THREE.Color('#62E6D2'), new THREE.Color('#55B8D8'), new THREE.Color('#F4B860')];
+
+    for (let i = 0; i < pointCount; i++) {
+      const ring = i % 3;
+      const pointOnRing = Math.floor(i / 3);
+      const angle = (pointOnRing / 70) * Math.PI * 2 + ring * 0.34;
+      const radius = [1.32, 1.49, 1.68][ring];
+      const arcGap = Math.sin(angle * 1.5 + ring) > -0.72;
+      const index = i * 3;
+
+      points[index] = Math.cos(angle) * radius;
+      points[index + 1] = Math.sin(angle) * radius * 0.94;
+      points[index + 2] = Math.sin(angle * 2 + ring) * 0.08 + (ring - 1) * 0.035;
+
+      const color = palette[ring].clone().multiplyScalar(arcGap ? 0.9 : 0.18);
+      tints[index] = color.r;
+      tints[index + 1] = color.g;
+      tints[index + 2] = color.b;
+    }
+
+    return { positions: points, colors: tints };
+  }, []);
+
+  useFrame((_, delta) => {
+    if (ref.current) {
+      ref.current.rotation.z += delta * 0.035;
+      ref.current.rotation.y = Math.sin(_.clock.elapsedTime * 0.25) * 0.08;
+    }
+  });
+
+  return (
+    <points ref={ref} rotation={[0.12, 0, 0]} scale={2.24}>
+      <bufferGeometry>
+        <bufferAttribute args={[positions, 3]} attach="attributes-position" />
+        <bufferAttribute args={[colors, 3]} attach="attributes-color" />
+      </bufferGeometry>
+      <pointsMaterial
+        size={0.028}
+        vertexColors
+        transparent
+        opacity={0.88}
+        sizeAttenuation
+        depthWrite={false}
+      />
     </points>
   );
 }
@@ -86,12 +140,13 @@ export function TechOrb() {
       pointer.y * -0.2,
       0.02
     );
+
   });
 
   return (
     <group ref={groupRef}>
-      {/* Stars background */}
-      <Stars radius={12} depth={8} count={300} factor={1.2} fade speed={0.5} />
+      {/* A floating constellation circles the portrait without a square particle field. */}
+      <PortraitOrbit />
 
       {/* Ambient particles */}
       <Particles />

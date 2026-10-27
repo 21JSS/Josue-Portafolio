@@ -5,6 +5,7 @@ import { ArrowDown, ChevronRight } from 'lucide-react';
 import { Button } from '../components/Button';
 import { socialLinks } from '../data/socialLinks';
 import { SocialIcon } from '../components/SocialIcon';
+import { ProfilePhotoPlaceholder } from '../components/ProfilePhotoPlaceholder';
 
 const Scene3D = lazy(() =>
   import('../three/Scene3D').then((m) => ({ default: m.Scene3D }))
@@ -91,12 +92,12 @@ export function Hero() {
             {/* CTAs */}
             <motion.div variants={fadeUp} className="hero-actions flex flex-wrap">
               <Button
-                onClick={() => scrollTo('projects')}
+                onClick={() => scrollTo('experience')}
                 variant="primary"
                 size="lg"
                 icon={<ChevronRight size={16} />}
               >
-                {t('hero.cta_projects')}
+                {t('hero.cta_experience')}
               </Button>
               <Button
                 onClick={() => scrollTo('about')}
@@ -127,7 +128,7 @@ export function Hero() {
             transition={{ duration: 0.65, delay: 0.2, ease: 'easeOut' }}
             className="flex min-w-0 items-center justify-center"
           >
-            <div className="h-72 w-full max-w-xl sm:h-80 lg:h-[28rem]">
+            <div className="relative h-72 w-full max-w-xl sm:h-80 lg:h-[28rem]">
               <Suspense fallback={
                 <div className="w-full h-full flex items-center justify-center">
                   <div className="w-8 h-8 rounded-full border-2 border-[#62E6D2]/30 border-t-[#62E6D2] animate-spin" />
@@ -135,6 +136,14 @@ export function Hero() {
               }>
                 <Scene3D />
               </Suspense>
+              <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+                <ProfilePhotoPlaceholder
+                  photoUrl="/josue-profile.webp"
+                  alt={t('hero.photoAlt')}
+                  size="xl"
+                  className="h-48 w-48 sm:h-56 sm:w-56 lg:h-64 lg:w-64"
+                />
+              </div>
             </div>
           </motion.div>
         </div>

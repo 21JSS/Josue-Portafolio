@@ -1,7 +1,6 @@
 {
   "nav": {
     "home": "Inicio",
-    "projects": "Proyectos",
     "about": "Sobre mí",
     "skills": "Habilidades",
     "experience": "Experiencia",
@@ -16,17 +15,17 @@
     "name": "Josué",
     "tagline": "Construyo soluciones digitales que marcan la diferencia",
     "description": "Ingeniero en Sistemas Computacionales apasionado por el desarrollo web moderno. Creo aplicaciones escalables, interfaces intuitivas y experiencias digitales de alto impacto.",
-    "cta_projects": "Ver proyectos",
+    "cta_experience": "Ver experiencia",
     "cta_about": "Sobre mí",
     "scroll": "Desplázate para explorar",
-    "photoAlt": "Espacio para fotografía de perfil"
+    "photoAlt": "Retrato de Josué con traje azul"
   },
   "projects": {
     "title": "Proyectos",
     "subtitle": "Trabajo seleccionado",
     "demo": "Ver demo",
     "code": "Ver código",
-    "noDemo": "Demo próximamente",
+    "noDemo": "Demo no disponible",
     "noRepo": "Repositorio privado",
     "items": {
       "inventory": {
@@ -40,12 +39,6 @@
         "description": "Aplicación de aprendizaje automático para clasificación y reconocimiento de imágenes mediante redes neuronales convolucionales.",
         "problem": "Explorar el potencial de la IA aplicada a la visión por computadora para resolver problemas de clasificación visual.",
         "features": "Clasificación en tiempo real, entrenamiento personalizado, interfaz de carga de imágenes, métricas de precisión"
-      },
-      "dotnetApi": {
-        "title": "API REST con ASP.NET Core",
-        "description": "API RESTful desarrollada con ASP.NET Core y Entity Framework, siguiendo principios de arquitectura limpia y buenas prácticas de seguridad.",
-        "problem": "Crear una capa de backend robusta, escalable y documentada para consumir desde aplicaciones frontend o móviles.",
-        "features": "Autenticación JWT, CRUD completo, documentación Swagger, validaciones, manejo de errores"
       },
       "configurable": {
         "title": "Proyecto por definir",
@@ -62,7 +55,13 @@
     "focus": "Mi enfoque profesional",
     "focusText": "Me especializo en el desarrollo de aplicaciones web modernas usando React en el frontend y ASP.NET Core o Node.js en el backend. Disfruto resolver problemas complejos y transformar ideas en soluciones funcionales.",
     "interests": "Intereses técnicos",
-    "interestsList": ["Desarrollo Full Stack", "Arquitectura de software", "Inteligencia artificial aplicada", "Experiencias 3D en la web", "Rendimiento y optimización"],
+    "interestsList": [
+      "Desarrollo Full Stack",
+      "Arquitectura de software",
+      "Inteligencia artificial aplicada",
+      "Experiencias 3D en la web",
+      "Rendimiento y optimización"
+    ],
     "education": "Formación académica",
     "educationText": "Ingeniería en Sistemas Computacionales",
     "objective": "Objetivo profesional",
@@ -93,12 +92,21 @@
       "residency": {
         "title": "Residencia Profesional — Desarrollador Web",
         "description": "Desarrollo de sistema web de inventario de equipos para la empresa MyCard. Implementación de frontend con React y backend con ASP.NET Core, integrado con base de datos SQL Server.",
-        "responsibilities": ["Diseño e implementación del sistema de inventario", "Desarrollo de API REST con ASP.NET Core", "Creación de interfaz de usuario con React y TypeScript", "Integración con base de datos SQL Server"]
+        "responsibilities": [
+          "Diseño e implementación del sistema de inventario",
+          "Desarrollo de API REST con ASP.NET Core",
+          "Creación de interfaz de usuario con React y TypeScript",
+          "Integración con base de datos SQL Server"
+        ]
       },
       "degree": {
         "title": "Ingeniería en Sistemas Computacionales",
         "description": "Formación universitaria en desarrollo de software, algoritmos, bases de datos, redes y fundamentos de ingeniería de sistemas.",
-        "responsibilities": ["Desarrollo de proyectos académicos en múltiples lenguajes", "Especialización en desarrollo web y aplicaciones de escritorio", "Proyecto de titulación orientado al desarrollo de software"]
+        "responsibilities": [
+          "Desarrollo de proyectos académicos en múltiples lenguajes",
+          "Especialización en desarrollo web y aplicaciones de escritorio",
+          "Proyecto de titulación orientado al desarrollo de software"
+        ]
       }
     }
   },

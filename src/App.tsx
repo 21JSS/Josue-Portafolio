@@ -1,15 +1,18 @@
+import { lazy, Suspense } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './sections/Hero';
-import { Projects } from './sections/Projects';
 import { About } from './sections/About';
 import { Skills } from './sections/Skills';
 import { Experience } from './sections/Experience';
-import { Lab } from './sections/Lab';
 import { Contact } from './sections/Contact';
+
+const WebAtmosphere = lazy(() =>
+  import('./three/WebAtmosphere').then((module) => ({ default: module.WebAtmosphere }))
+);
 
 function Footer() {
   return (
-    <footer className="border-t border-[#62E6D2]/08 py-8 px-4 text-center" role="contentinfo">
+    <footer className="relative z-[1] border-t border-[#62E6D2]/08 py-8 px-4 text-center" role="contentinfo">
       <p className="text-xs text-[#718591]">
         © {new Date().getFullYear()}{' '}
         <span className="text-[#62E6D2] font-display font-semibold">JOSS.DEV</span>
@@ -25,14 +28,15 @@ function Footer() {
 function App() {
   return (
     <div className="min-h-svh bg-[#07111A] text-[#F2F7FA] overflow-x-hidden">
+      <Suspense fallback={null}>
+        <WebAtmosphere />
+      </Suspense>
       <Navbar />
-      <main id="main-content">
+      <main id="main-content" className="relative z-[1]">
         <Hero />
-        <Projects />
         <About />
         <Skills />
         <Experience />
-        <Lab />
         <Contact />
       </main>
       <Footer />

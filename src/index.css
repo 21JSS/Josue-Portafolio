@@ -63,6 +63,31 @@ body {
   min-height: 100svh;
 }
 
+.web-atmosphere {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0.82;
+}
+
+.web-atmosphere canvas {
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .web-atmosphere {
+    opacity: 0.48;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .web-atmosphere {
+    display: none;
+  }
+}
+
 /* ===========================
    TYPOGRAPHY
    =========================== */

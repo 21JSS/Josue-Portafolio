@@ -1,7 +1,6 @@
 {
   "nav": {
     "home": "Home",
-    "projects": "Projects",
     "about": "About",
     "skills": "Skills",
     "experience": "Experience",
@@ -16,17 +15,17 @@
     "name": "Josué",
     "tagline": "I build digital solutions that make a difference",
     "description": "Computer Systems Engineer passionate about modern web development. I create scalable applications, intuitive interfaces and high-impact digital experiences.",
-    "cta_projects": "View projects",
+    "cta_experience": "View experience",
     "cta_about": "About me",
     "scroll": "Scroll to explore",
-    "photoAlt": "Profile photo placeholder"
+    "photoAlt": "Portrait of Josué wearing a blue suit"
   },
   "projects": {
     "title": "Projects",
     "subtitle": "Selected work",
     "demo": "Live demo",
     "code": "View code",
-    "noDemo": "Demo coming soon",
+    "noDemo": "Demo not available",
     "noRepo": "Private repository",
     "items": {
       "inventory": {
@@ -40,12 +39,6 @@
         "description": "Machine learning application for image classification and recognition using convolutional neural networks.",
         "problem": "Explore AI's potential applied to computer vision to solve visual classification problems.",
         "features": "Real-time classification, custom training, image upload interface, accuracy metrics"
-      },
-      "dotnetApi": {
-        "title": "REST API with ASP.NET Core",
-        "description": "RESTful API built with ASP.NET Core and Entity Framework, following clean architecture principles and security best practices.",
-        "problem": "Create a robust, scalable and documented backend layer to consume from frontend or mobile applications.",
-        "features": "JWT authentication, full CRUD, Swagger documentation, validations, error handling"
       },
       "configurable": {
         "title": "Project to be defined",
@@ -62,7 +55,13 @@
     "focus": "My professional focus",
     "focusText": "I specialize in building modern web applications using React on the frontend and ASP.NET Core or Node.js on the backend. I enjoy solving complex problems and transforming ideas into functional solutions.",
     "interests": "Technical interests",
-    "interestsList": ["Full Stack Development", "Software Architecture", "Applied Artificial Intelligence", "3D Web Experiences", "Performance & Optimization"],
+    "interestsList": [
+      "Full Stack Development",
+      "Software Architecture",
+      "Applied Artificial Intelligence",
+      "3D Web Experiences",
+      "Performance & Optimization"
+    ],
     "education": "Education",
     "educationText": "Computer Systems Engineering Degree",
     "objective": "Professional objective",
@@ -93,12 +92,21 @@
       "residency": {
         "title": "Professional Residency — Web Developer",
         "description": "Development of an equipment inventory web system for MyCard. Frontend implementation with React and backend with ASP.NET Core, integrated with SQL Server database.",
-        "responsibilities": ["Design and implementation of the inventory system", "REST API development with ASP.NET Core", "User interface creation with React and TypeScript", "SQL Server database integration"]
+        "responsibilities": [
+          "Design and implementation of the inventory system",
+          "REST API development with ASP.NET Core",
+          "User interface creation with React and TypeScript",
+          "SQL Server database integration"
+        ]
       },
       "degree": {
         "title": "Computer Systems Engineering Degree",
         "description": "University degree in software development, algorithms, databases, networking and systems engineering fundamentals.",
-        "responsibilities": ["Development of academic projects in multiple languages", "Specialization in web development and desktop applications", "Thesis project focused on software development"]
+        "responsibilities": [
+          "Development of academic projects in multiple languages",
+          "Specialization in web development and desktop applications",
+          "Thesis project focused on software development"
+        ]
       }
     }
   },
